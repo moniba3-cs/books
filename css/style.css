@@ -184,7 +184,7 @@ code { background: var(--blush); padding: .1em .4em; border-radius: 6px; font-si
 .cta-card h3 { margin-bottom: 1rem; }
 
 /* ---------- Buy ---------- */
-.store-grid { list-style: none; width: min(100%, 380px); padding: 0; margin: 0 auto 1rem; display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.reader-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; }
 .store-card { display: flex; flex-direction: column; gap: .3rem; align-items: center; justify-content: center; min-height: 112px; padding: 1.2rem; background: var(--cream); border: 2px solid var(--dusty); border-radius: var(--radius); text-decoration: none; color: var(--choc); transition: transform .2s, box-shadow .2s, border-color .2s, background .2s; }
 .store-card[href]:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--rose-brown); background: #fff; color: var(--choc); }
 .store-name { font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; }

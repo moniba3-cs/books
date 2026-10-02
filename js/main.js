@@ -22,11 +22,6 @@
     var v = cfg[el.getAttribute('data-cfg-mailto')];
     if (v) el.setAttribute('href', 'mailto:' + v);
   });
-  $$('[data-buy]').forEach(function (el) {
-    var v = cfg.purchaseLinks && cfg.purchaseLinks[el.getAttribute('data-buy')];
-    if (v) el.setAttribute('href', v);
-  });
-
   /* ---------- 2. Book cover (falls back to placeholder) ---------- */
   var coverImg = $('#book-cover-img'), placeholder = $('#cover-placeholder');
   if (coverImg && cfg.bookCover) {

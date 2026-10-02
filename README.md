@@ -7,8 +7,8 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies. Open `index.html
 |---|---|
 | `instagramUrl` | Your Instagram link (used in every Instagram button) |
 | `email` | Your email shown in Contact |
-| `purchaseLinks` | Amazon, Kobo, Google Play Books, Apple Books URLs |
 | `bookCover` | File name of your cover image |
+| `reviewUrl` | Link used by the reader review button |
 | `formEndpoint` | Contact form service URL |
 | `authorName`, `bookTitle`, `genre` | Names shown across the site |
 
@@ -25,8 +25,8 @@ Until you do, the form validates but is honest that nothing was sent. If you onl
 ## Note on hard-coded placeholders
 The same placeholder links also appear in `index.html` as defaults (so the site works even if JavaScript is off). Changing `config.js` is enough; to be thorough you can also search `index.html` for `YOUR_USERNAME` and `YOUR_EMAIL`.
 
-## EasyPaisa payments and PDF delivery
-The Buy section currently shows an EasyPaisa placeholder for PKR 200; it does not accept payments or deliver the PDF yet. A personal phone number by itself cannot securely confirm a payment or trigger delivery. To enable this, set up an official EasyPaisa merchant/hosted checkout and a server-side payment confirmation flow, then deliver the PDF through an access-controlled link only after payment is verified. Keep the payment credentials and PDF out of public client-side files.
+## Full book reader
+The complete manuscript is published as a web reader in `book.html`. To regenerate it after updating the source DOCX, run `powershell -ExecutionPolicy Bypass -File tools/convert-manuscript.ps1 -InputPath "D:\The_Women.docx"`. The book is freely accessible; Instagram follows and reviews are optional and are not verified by the site.
 
 ## Content source
-Book description, themes, dedication, content note and the Chapter One excerpt come from your manuscript or your supplied copy. No reviews, awards or publisher are claimed.
+The book description, themes, dedication, content note, excerpt, and full reader are based on the supplied manuscript. No reviews, awards or publisher are claimed.
