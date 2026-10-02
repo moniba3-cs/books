@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" role="img" aria-labelledby="cover-title">
+  <title id="cover-title">The Women by Monibah Mehmood</title>
+  <defs>
+    <clipPath id="cover-shape">
+      <rect width="800" height="1200" rx="8"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#cover-shape)">
+    <rect width="800" height="1200" fill="#f3e8df"/>
+    <path d="M0 0h800v670c-116-37-232-35-350 7-143 51-292 41-450-5V0Z" fill="#51383b"/>
+
+    <g fill="none" stroke="#b77b7c" stroke-linecap="round" opacity=".58">
+      <path d="m86 104 26 104M173 25l29 116M285 62l24 95M493 37l30 118M620 78l24 102M719 22l25 116" stroke-width="3"/>
+      <path d="m38 338 21 82M141 277l24 97M666 292l24 91M755 360l18 71" stroke-width="2"/>
+    </g>
+
+    <path d="M0 618c137 30 255 22 378-15 141-42 268-54 422-7v174H0V618Z" fill="#84565a"/>
+    <path d="M0 719c142-38 270-29 406 15 130 42 256 30 394-15v481H0V719Z" fill="#a46d6c"/>
+    <path d="M0 866c159-54 287-49 431 1 134 47 245 40 369-4v337H0V866Z" fill="#65705e"/>
+    <path d="M0 1003c155-35 278-26 422 20 136 44 251 41 378 6v171H0v-197Z" fill="#465447"/>
+
+    <g fill="#51383b" opacity=".88">
+      <path d="M165 705h82v70h-82zM155 705l51-42 51 42z"/>
+      <path d="M259 731h56v51h-56zM252 731l35-30 35 30z"/>
+      <path d="M488 694h73v65h-73zM478 694l47-39 47 39z"/>
+      <path d="M576 721h48v44h-48zM569 721l31-27 31 27z"/>
+      <path d="M201 734h12v25h-12zM515 716h13v25h-13z" fill="#d8b4a8"/>
+    </g>
+
+    <g fill="none" stroke="#f3e8df" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M388 1068c28-120 37-222 27-342-5-58-1-102 19-151" stroke-width="6"/>
+      <path d="M411 903c-52-61-87-82-133-91 18 43 52 73 133 91ZM417 833c42-61 75-84 123-101-11 47-47 81-123 101ZM403 1000c-43-42-74-55-112-57 19 35 48 54 112 57Z" stroke-width="5"/>
+    </g>
+    <g fill="#d8a0a0" stroke="#f3e8df" stroke-width="3">
+      <ellipse cx="434" cy="562" rx="16" ry="30" transform="rotate(-8 434 562)"/>
+      <ellipse cx="463" cy="578" rx="16" ry="30" transform="rotate(64 463 578)"/>
+      <ellipse cx="452" cy="608" rx="16" ry="30" transform="rotate(140 452 608)"/>
+      <ellipse cx="420" cy="600" rx="16" ry="30" transform="rotate(210 420 600)"/>
+      <ellipse cx="409" cy="570" rx="16" ry="30" transform="rotate(286 409 570)"/>
+      <circle cx="435" cy="585" r="12" fill="#d3ad73" stroke="none"/>
+    </g>
+
+    <path d="M130 169h540" stroke="#d8a0a0" stroke-width="2" opacity=".72"/>
+    <text x="400" y="282" text-anchor="middle" fill="#f3e8df" font-family="Georgia, 'Times New Roman', serif" font-size="102" font-weight="400">THE</text>
+    <text x="400" y="397" text-anchor="middle" fill="#f3e8df" font-family="Georgia, 'Times New Roman', serif" font-size="102" font-weight="400">WOMEN</text>
+    <path d="M130 459h540" stroke="#d8a0a0" stroke-width="2" opacity=".72"/>
+    <text x="400" y="1127" text-anchor="middle" fill="#f3e8df" font-family="Georgia, 'Times New Roman', serif" font-size="30">Monibah Mehmood</text>
+
+    <rect x="28" y="28" width="744" height="1144" fill="none" stroke="#d8a0a0" stroke-width="2" opacity=".7"/>
+  </g>
+</svg>

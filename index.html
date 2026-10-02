@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Women — Official Author Website</title>
+  <meta name="description" content="The Women, a work of tragic fiction by Monibah Mehmood. Set in the village of Darwan Khel, it is a story of women, silence, courage and truth.">
+  <meta name="theme-color" content="#4a2a22">
+  <meta property="og:title" content="The Women — Official Author Website">
+  <meta property="og:description" content="A novel of tragic fiction by Monibah Mehmood.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative shapes (reused below). Edit colours in css/style.css -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="flower" viewBox="0 0 48 48">
+        <g fill="currentColor"><circle cx="35" cy="24" r="9"/><circle cx="27.4" cy="34.5" r="9"/><circle cx="15.1" cy="30.5" r="9"/><circle cx="15.1" cy="17.5" r="9"/><circle cx="27.4" cy="13.5" r="9"/></g>
+        <circle cx="24" cy="24" r="5.5" fill="var(--cream)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="The Women — home">
+        <svg class="brand-flower" aria-hidden="true"><use href="#flower"/></svg>
+        <span data-cfg-text="bookTitle">The Women</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <svg class="icon icon-menu" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon icon-close" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m18 6-12 12M6 6l12 12"/></svg>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-book">About the Book</a></li>
+        <li><a href="#about-author">About the Author</a></li>
+        <li><a href="#read">Read</a></li>
+        <li><a href="#buy">Buy</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta"><a class="btn btn-small btn-primary" href="#buy" data-cfg-href="buyButtonTarget">Buy the Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <svg class="deco d-flower hero-bloom-left" aria-hidden="true"><use href="#flower"/></svg>
+      <svg class="deco d-flower hero-bloom-corner" aria-hidden="true"><use href="#flower"/></svg>
+
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">A work of tragic fiction</p>
+          <h1 id="hero-title" class="book-title"><span data-cfg-text-upper="bookTitle">THE WOMEN</span></h1>
+          <p class="byline">A Novel by <span data-cfg-text="authorName">Monibah Mehmood</span></p>
+          <p class="tagline">Some truths stay buried for generations, until a voice refuses to stay silent.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#about-book">Explore the Book</a>
+            <a class="btn btn-secondary" href="#buy" data-cfg-href="buyButtonTarget">Buy the Book</a>
+          </div>
+        </div>
+
+        <div class="hero-cover">
+          <!-- BOOK COVER: shown if the image in js/config.js exists; otherwise the placeholder shows -->
+          <div class="book" id="book-mockup">
+            <div class="book-cover">
+              <img id="book-cover-img" class="cover-img" alt="Book cover of The Women by Monibah Mehmood" hidden width="800" height="1200">
+              <div class="cover-placeholder" id="cover-placeholder">
+                <svg class="deco-inline" aria-hidden="true"><use href="#flower"/></svg>
+                <p>The Women</p>
+                <small>Cover preview unavailable.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INTRO ===================== -->
+    <section class="section intro" aria-labelledby="intro-title">
+      <div class="container narrow center reveal">
+        <svg class="deco-inline dc-flower" aria-hidden="true"><use href="#flower"/></svg>
+        <h2 id="intro-title">A Story of Women, Silence, Courage &amp; Truth</h2>
+        <p class="lead">In the remote village of Darwan Khel, tradition, fear and patriarchal power have shaped the lives of generations of women. When Zahra arrives as a botanical field researcher, she does not yet know how closely the village’s past is tied to her own.</p>
+        <blockquote class="pull">
+          This is not just a story of one girl. It is a story of generations buried under silence, of truth hidden behind tradition, and of voices that were never allowed to speak.
+        </blockquote>
+        <a class="link-arrow" href="#about-book">Discover The Women →</a>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span></span><svg><use href="#flower"/></svg><span></span></div>
+
+    <!-- ===================== ABOUT THE BOOK ===================== -->
+    <section class="section" id="about-book" aria-labelledby="book-title-h">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">About the Book</p>
+          <h2 id="book-title-h">The Women</h2>
+        </header>
+
+        <div class="book-grid">
+          <aside class="details-card reveal" aria-label="Book details">
+            <dl>
+              <div><dt>Title</dt><dd data-cfg-text="bookTitle">The Women</dd></div>
+              <div><dt>Author</dt><dd data-cfg-text="authorName">Monibah Mehmood</dd></div>
+              <div><dt>Genre</dt><dd data-cfg-text="genre">Tragic Fiction</dd></div>
+              <div><dt>Dedication</dt><dd><em>To all women’s tragedies</em></dd></div>
+            </dl>
+          </aside>
+
+          <div class="prose reveal">
+            <p>The Women is a work of tragic fiction set in the remote village of Darwan Khel, where tradition, fear, and patriarchal power have controlled generations of women. Twenty-three years after a newborn girl is condemned simply for being born female, Zahra returns to the village as a botanical field researcher, unaware of the secrets connecting her to its troubled past. As buried memories begin to surface and long-hidden truths emerge, Zahra finds herself caught in a struggle against a powerful man determined to protect his authority at any cost.</p>
+            <p>Through Zahra’s journey, The Women explores gender discrimination, family, identity, grief, courage, and the price of silence. It is a story about the women who endure, the people who dare to resist, and the truth that can no longer remain buried.</p>
+          </div>
+        </div>
+
+        <div class="themes reveal">
+          <h3>Themes</h3>
+          <ul class="chips">
+            <li>Women and identity</li>
+            <li>Tradition and oppression</li>
+            <li>Family</li>
+            <li>Grief and loss</li>
+            <li>Courage</li>
+            <li>Silence and truth</li>
+            <li>Resilience</li>
+          </ul>
+        </div>
+
+        <aside class="note reveal" aria-label="Content note">
+          <svg class="deco-inline" aria-hidden="true"><use href="#flower"/></svg>
+          <p><strong>Content note.</strong> This story contains sensitive and heavy themes that may be distressing to some readers, including violence, the death of family members, child loss, abuse of power, psychological trauma, and gender-based oppression. Reader discretion is advised.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT THE AUTHOR ===================== -->
+    <section class="section tinted" id="about-author" aria-labelledby="author-title">
+      <div class="container narrow center reveal">
+        <svg class="deco-inline dc-flower" aria-hidden="true"><use href="#flower"/></svg>
+        <p class="eyebrow">About the Author</p>
+        <h2 id="author-title" data-cfg-text="authorName">Monibah Mehmood</h2>
+        <p class="lead">Monibah Mehmood is an emerging writer and computer science graduate with a passion for storytelling and exploring human emotions, social realities, resilience, and the experiences of women. Through her writing, she hopes to create meaningful stories that stay with readers and give them something to reflect upon. The Women is her first novel.</p>
+        <a class="btn btn-primary" href="https://instagram.com/YOUR_USERNAME" data-cfg-href="instagramUrl" target="_blank" rel="noopener noreferrer">Follow my writing journey<span class="sr-only"> (opens Instagram in a new tab)</span></a>
+      </div>
+    </section>
+
+    <!-- ===================== READ ===================== -->
+    <section class="section" id="read" aria-labelledby="read-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Read</p>
+          <h2 id="read-title">Read an Excerpt</h2>
+          <p class="sub">The opening of Chapter One. Please note the content note above.</p>
+        </header>
+
+        <article class="page reveal" aria-label="Excerpt from Chapter One">
+          <svg class="deco page-flower" aria-hidden="true"><use href="#flower"/></svg>
+          <p class="chapter-label">Part One · The Child in the Rain</p>
+          <h3 class="chapter-title">Chapter One: Bad Luck</h3>
+          <div class="excerpt">
+            <p><span class="opening">The storm broke over</span> Darwan Khel a little after midnight, and by the time the child was born there was no sky left, only water, and the sound of it drumming on black goat-hair canvas.</p>
+            <p>The birthing tent had been pitched behind the great house on the hill, as it always was when a child of that family was due. Inside, it smelled of smoke, boiled herbs and blood. On a low cot behind a hanging blanket lay a young woman with her hair matted to her forehead and her hands still clenched, though she had passed out from exhaustion an hour before. Her husband, Ali, had ridden into the storm at dusk to fetch the lady doctor from the town below. Agha had said the midwife was enough. Ali had not agreed. Nobody had seen him since.</p>
+            <p>The old midwife, Sherbano, stood at the lamp with the newborn in her trembling hands. The child had not cried at first. Then, faintly, like a door opening somewhere far away, she did.</p>
+            <p>The tent flap was thrown back. Rain blew in, and behind it came Agha, the elder brother, tall and wet and unhurried. The lamplight found his face and did not soften it.</p>
+            <p>“Is she alive?” he asked coldly. “Can you feel her breath?”</p>
+            <p>Sherbano hesitated. “Yes, Agha. She lives.”</p>
+            <p>His face darkened. “Then perhaps you should kill her before her mother wakes.”</p>
+            <p>The tent fell silent. Even the rain seemed to lean closer to listen.</p>
+          </div>
+          <p class="excerpt-end" aria-hidden="true">· · ·</p>
+        </article>
+
+        <div class="cta-card reveal">
+          <h3>Want to read the full story?</h3>
+          <a class="btn btn-primary" href="#buy" data-cfg-href="buyButtonTarget">Buy The Women</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BUY ===================== -->
+    <section class="section tinted" id="buy" aria-labelledby="buy-title">
+      <div class="container narrow center">
+        <header class="section-head reveal">
+          <p class="eyebrow">Buy the Book</p>
+          <h2 id="buy-title">Own a Copy of The Women</h2>
+          <p class="sub">Digital PDF edition · PKR 200. EasyPaisa checkout is not connected yet.</p>
+        </header>
+
+        <ul class="store-grid reveal">
+          <li>
+            <div class="store-card" aria-label="EasyPaisa checkout, PKR 200, not yet available">
+              <span class="store-name">EasyPaisa</span>
+              <span class="store-go">PKR 200 · Checkout setup pending</span>
+            </div>
+          </li>
+        </ul>
+
+        <p class="sub">The PDF will be delivered after payment is verified.</p>
+
+        <div class="cta-card reveal">
+          <h3>Prefer to hear about new releases and updates?</h3>
+          <a class="btn btn-secondary" href="https://instagram.com/YOUR_USERNAME" data-cfg-href="instagramUrl" target="_blank" rel="noopener noreferrer">Follow on Instagram<span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Let’s Connect</h2>
+            <p class="lead left">For book-related questions, reader messages, collaboration opportunities, or publishing inquiries, feel free to get in touch.</p>
+            <ul class="contact-list">
+              <li><span>Email</span> <a href="mailto:YOUR_EMAIL@example.com" data-cfg-mailto="email" data-cfg-text="email">YOUR_EMAIL@example.com</a></li>
+              <li><span>Instagram</span> <a href="https://instagram.com/YOUR_USERNAME" data-cfg-href="instagramUrl" data-cfg-text="instagramUrl" target="_blank" rel="noopener noreferrer">https://instagram.com/YOUR_USERNAME</a></li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name">
+              <p class="error" id="err-name" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="err-email">
+              <p class="error" id="err-email" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="6" required aria-describedby="err-message"></textarea>
+              <p class="error" id="err-message" role="alert"></p>
+            </div>
+            <!-- Honeypot field: hidden from people, catches simple spam bots -->
+            <div class="hp" aria-hidden="true"><label>Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title" data-cfg-text="bookTitle">The Women</p>
+        <p>Written by <span data-cfg-text="authorName">Monibah Mehmood</span></p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-book">About the Book</a></li>
+          <li><a href="#about-author">About the Author</a></li>
+          <li><a href="#read">Read</a></li>
+          <li><a href="#buy">Buy</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://instagram.com/YOUR_USERNAME" data-cfg-href="instagramUrl" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="copyright">© 2026 Monibah Mehmood. All rights reserved.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
