@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#4a2a22">
-  <title>The Women: Read the Full Book</title>
+  <title>BOOKies | Read The Women</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,18 @@
     .reader-gate p { color: var(--choc-soft); }
     .reader-gate-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; margin-top: 1.5rem; }
     .reader-note { font-size: .9rem; }
+    .review-dialog { width: min(560px, calc(100% - 2rem)); max-height: min(90vh, 760px); padding: 0; color: var(--choc); background: var(--cream); border: 1px solid var(--line); box-shadow: 0 24px 80px rgba(30, 20, 16, .35); }
+    .review-dialog::backdrop { background: rgba(34, 24, 21, .68); }
+    .review-form { padding: clamp(1.25rem, 4vw, 2rem); }
+    .review-dialog-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.3rem; }
+    .review-dialog-head h2 { margin: 0; }
+    .review-close { flex: none; padding: .25rem .55rem; border: 1px solid var(--line); border-radius: 4px; background: transparent; color: var(--choc); font: inherit; font-size: 1.3rem; cursor: pointer; }
+    .review-field { margin-bottom: 1rem; }
+    .review-field label { display: block; margin-bottom: .3rem; font-weight: 600; }
+    .review-field input, .review-field textarea { width: 100%; padding: .7rem .8rem; border: 1px solid var(--line); border-radius: 4px; background: #fff; color: var(--choc); font: inherit; }
+    .review-field textarea { min-height: 150px; resize: vertical; }
+    .review-email-link { display: inline-block; margin-top: 1rem; }
+    .review-status { margin: .8rem 0 0; font-size: .95rem; }
     .manuscript { padding: clamp(1.5rem, 6vw, 4rem); background: #fffaf3; border: 1px solid var(--line); box-shadow: var(--shadow); }
     .manuscript > h1:first-child { text-align: center; font-size: 2.4rem; }
     .manuscript > h2.part-heading { margin: 3rem 0 1.2rem; padding-top: 1.2rem; border-top: 1px solid var(--line); font-size: 2.2rem; }
@@ -33,7 +45,7 @@
 </head>
 <body>
   <header class="reader-header">
-    <a class="btn btn-small btn-secondary" href="index.html#read">Back to the website</a>
+    <a class="btn btn-small btn-secondary" href="index.html#home">BOOKies home</a>
     <h1>The Women</h1>
     <p class="reader-author">Monibah Mehmood</p>
   </header>
@@ -968,9 +980,24 @@
     </article>
     <nav class="reader-footer" aria-label="Reader links" hidden>
       <a class="btn btn-secondary" href="https://instagram.com/mrtvilo._" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
-      <a class="btn btn-primary" href="mailto:mmonibah3@gmail.com?subject=Review%20of%20The%20Women">Write a review</a>
+      <button class="btn btn-primary" id="open-review" type="button">Write a review</button>
     </nav>
   </main>
+  <dialog class="review-dialog" id="review-dialog" aria-labelledby="review-title">
+    <form class="review-form" id="review-form">
+      <div class="review-dialog-head">
+        <div><p class="eyebrow">Reader Review</p><h2 id="review-title">Share your thoughts</h2></div>
+        <button class="review-close" id="close-review" type="button" aria-label="Close review form">×</button>
+      </div>
+      <div class="review-field"><label for="review-name">Your name</label><input id="review-name" name="name" autocomplete="name" required></div>
+      <div class="review-field"><label for="review-email">Your email</label><input id="review-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="review-field"><label for="review-message">Your review</label><textarea id="review-message" name="review" required minlength="10"></textarea></div>
+      <button class="btn btn-primary" id="send-review" type="submit">Send review</button>
+      <p class="review-status" id="review-status" role="status" aria-live="polite"></p>
+      <a class="btn btn-secondary review-email-link" id="send-review-email" hidden>Open email app to send review</a>
+    </form>
+  </dialog>
+  <script src="js/config.js"></script>
   <script>
     document.getElementById('unlock-book').addEventListener('click', function () {
       document.getElementById('reader-gate').hidden = true;
@@ -978,6 +1005,58 @@
       manuscript.hidden = false;
       document.querySelector('.reader-footer').hidden = false;
       manuscript.focus();
+    });
+
+    var reviewDialog = document.getElementById('review-dialog');
+    var reviewForm = document.getElementById('review-form');
+    document.getElementById('open-review').addEventListener('click', function () { reviewDialog.showModal(); });
+    document.getElementById('close-review').addEventListener('click', function () { reviewDialog.close(); });
+    reviewDialog.addEventListener('click', function (event) {
+      if (event.target === reviewDialog) reviewDialog.close();
+    });
+    reviewForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!reviewForm.reportValidity()) return;
+      var fields = new FormData(reviewForm);
+      var data = {
+        name: fields.get('name').trim(),
+        email: fields.get('email').trim(),
+        review: fields.get('review').trim(),
+        _subject: 'Review of The Women - ' + fields.get('name').trim()
+      };
+      var emailLink = document.getElementById('send-review-email');
+      var reviewStatus = document.getElementById('review-status');
+      var sendButton = document.getElementById('send-review');
+
+      function prepareEmail(message) {
+        var subject = encodeURIComponent(data._subject);
+        var body = encodeURIComponent('Name: ' + data.name + '\nEmail: ' + data.email + '\n\nReview:\n' + data.review);
+        emailLink.href = 'mailto:' + ((window.SITE_CONFIG || {}).email || 'mmonibah3@gmail.com') + '?subject=' + subject + '&body=' + body;
+        emailLink.hidden = false;
+        reviewStatus.textContent = message;
+        emailLink.focus();
+      }
+
+      if (!(window.SITE_CONFIG || {}).formEndpoint) {
+        prepareEmail('Your email app will open. Press Send there to deliver your review.');
+        return;
+      }
+
+      sendButton.disabled = true;
+      reviewStatus.textContent = 'Sending your review...';
+      fetch(window.SITE_CONFIG.formEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (response) {
+        if (!response.ok) throw new Error('Review service rejected the submission.');
+        reviewForm.reset();
+        reviewStatus.textContent = 'Thank you. Your review was sent.';
+      }).catch(function () {
+        prepareEmail('The email service did not accept this review. Open your email app and press Send to deliver it.');
+      }).then(function () {
+        sendButton.disabled = false;
+      });
     });
   </script>
 </body>
