@@ -26,7 +26,7 @@ Until you do, the form validates but is honest that nothing was sent. If you onl
 The same placeholder links also appear in `index.html` as defaults (so the site works even if JavaScript is off). Changing `config.js` is enough; to be thorough you can also search `index.html` for `YOUR_USERNAME` and `YOUR_EMAIL`.
 
 ## Full book reader
-The complete manuscript is published as a web reader in `book.html`. To regenerate it after updating the source DOCX, run `powershell -ExecutionPolicy Bypass -File tools/convert-manuscript.ps1 -InputPath "D:\The_Women.docx"`. The book is freely accessible; Instagram follows and reviews are optional and are not verified by the site.
+The complete manuscript is published as a web reader in `book.html`. Readers are asked to follow Instagram and confirm before the text is revealed; this is an honor-based prompt because Instagram does not let this static site verify follows. A review button opens an email to the author. To regenerate the reader after updating the source DOCX, run `powershell -ExecutionPolicy Bypass -File tools/convert-manuscript.ps1 -InputPath "D:\The_Women.docx"`.
 
 ## Content source
 The book description, themes, dedication, content note, excerpt, and full reader are based on the supplied manuscript. No reviews, awards or publisher are claimed.

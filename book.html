@@ -15,6 +15,11 @@
     .reader-header h1 { margin: 1.2rem 0 .1rem; font-size: clamp(2.5rem, 8vw, 4rem); }
     .reader-author { margin: 0; color: var(--rose-brown); font-style: italic; }
     .reader-main { width: min(760px, 100% - 2.5rem); margin: 2.5rem auto 5rem; }
+    .reader-gate { max-width: 540px; margin: 4rem auto; padding: 0 1rem; text-align: center; }
+    .reader-gate h2 { margin-bottom: .8rem; }
+    .reader-gate p { color: var(--choc-soft); }
+    .reader-gate-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; margin-top: 1.5rem; }
+    .reader-note { font-size: .9rem; }
     .manuscript { padding: clamp(1.5rem, 6vw, 4rem); background: #fffaf3; border: 1px solid var(--line); box-shadow: var(--shadow); }
     .manuscript > h1:first-child { text-align: center; font-size: 2.4rem; }
     .manuscript > h2.part-heading { margin: 3rem 0 1.2rem; padding-top: 1.2rem; border-top: 1px solid var(--line); font-size: 2.2rem; }
@@ -33,7 +38,17 @@
     <p class="reader-author">Monibah Mehmood</p>
   </header>
   <main class="reader-main">
-    <article class="manuscript" aria-label="The full text of The Women">
+    <section class="reader-gate" id="reader-gate" aria-labelledby="reader-gate-title">
+      <p class="eyebrow">Step 1</p>
+      <h2 id="reader-gate-title">Follow to read</h2>
+      <p>Follow Monibah on Instagram, then return here and confirm to open the full book.</p>
+      <div class="reader-gate-actions">
+        <a class="btn btn-primary" href="https://instagram.com/mrtvilo._" target="_blank" rel="noopener noreferrer">Follow on Instagram<span class="sr-only"> (opens in a new tab)</span></a>
+        <button class="btn btn-secondary" id="unlock-book" type="button">I followed - continue</button>
+      </div>
+      <p class="reader-note">This website cannot verify Instagram follows; the confirmation is on your honor.</p>
+    </section>
+    <article class="manuscript" aria-label="The full text of The Women" tabindex="-1" hidden>
 <p><strong>THE WOMEN</strong></p>
 <p><em>A Novel</em></p>
 <p>Tragic Fiction</p>
@@ -951,10 +966,19 @@
 <p>The End</p>
 
     </article>
-    <nav class="reader-footer" aria-label="Reader links">
-      <a class="btn btn-secondary" href="index.html#community">Follow on Instagram</a>
+    <nav class="reader-footer" aria-label="Reader links" hidden>
+      <a class="btn btn-secondary" href="https://instagram.com/mrtvilo._" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
       <a class="btn btn-primary" href="mailto:mmonibah3@gmail.com?subject=Review%20of%20The%20Women">Write a review</a>
     </nav>
   </main>
+  <script>
+    document.getElementById('unlock-book').addEventListener('click', function () {
+      document.getElementById('reader-gate').hidden = true;
+      var manuscript = document.querySelector('.manuscript');
+      manuscript.hidden = false;
+      document.querySelector('.reader-footer').hidden = false;
+      manuscript.focus();
+    });
+  </script>
 </body>
 </html>
