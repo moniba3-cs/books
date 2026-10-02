@@ -123,7 +123,7 @@ try {
     <section class="reader-gate" id="reader-gate" aria-labelledby="reader-gate-title">
       <p class="eyebrow">Step 1</p>
       <h2 id="reader-gate-title">Follow to read</h2>
-      <p>Follow Monibah on Instagram, then return here and confirm to open the full book.</p>
+      <p>Follow on Instagram, then return here and confirm to open the full book.</p>
       <div class="reader-gate-actions">
         <a class="btn btn-primary" href="https://instagram.com/mrtvilo._" target="_blank" rel="noopener noreferrer">Follow on Instagram<span class="sr-only"> (opens in a new tab)</span></a>
         <button class="btn btn-secondary" id="unlock-book" type="button">I followed - continue</button>
